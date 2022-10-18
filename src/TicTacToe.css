@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.board {
+  border: none;
+  background: #fff;
+  width: 400px;
+  height: 400px;
+
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 4px;
+}
+
+.squares {
+  background: #000;
+  border: none;
+  font-size: 61px;
+  cursor: pointer;
+  outline: none;
+}
+
+.X {
+  color: white;
+}
+.O {
+  color: white;
+}
+
+.info {
+  display: flex;
+  text-align: center;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.info .info-box {
+  padding: 20px;
+  color: #999;
+}
+
+.info .info-box h3 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  padding: 2px;
+}
+
+li {
+  list-style: none;
+}
+
+.info button {
+  background: white;
+  padding: 10px 30px;
+  color: #000;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 4px 7px;
+  border-radius: 5px;
+}
+
+.winner-info {
+  text-align: center;
+}
+
+.square--winner {
+  background-color: yellow;
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    font-size: 9px;
+    padding: 2rem;
+    min-width: 70vw;
+    min-height: 70vh;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  .board {
+    width: 350px;
+    height: 350px;
+  }
+  .squares {
+    font-size: 2rem;
+  }
+}
